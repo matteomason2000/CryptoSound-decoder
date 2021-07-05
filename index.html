@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pitch Detector</title>
+	</head>
+	<body>
+
+		<style type="text/css">
+
+		body {	font: 2em 'Helvetica';
+				font-weight: lighter;
+				color: white;
+				background-color: black;			}
+
+		pre{
+			font-family: helvetica;
+			font-weight: lighter;
+			font-size: 1em;
+			margin-top: 0;
+			white-space: normal;
+			word-break: break-word;
+			overflow: scroll;
+			word-wrap: break-word;
+		}
+
+		.box1 {
+
+			display: block;
+			width: auto;
+			min-height: 3em;
+			width: 100%;
+			min-width: 6em;
+			height: 6em;
+			border: 1px solid white;
+			background-color: black;
+			color: white;
+			margin-bottom: 1em;	
+			font-weight: 200;
+			font-size: 1em;
+			padding: 0 0 0 10px;
+			font-family: helvetica;
+			padding-top: 0.5em;
+			}
+
+		.griglia{
+
+			margin: 2em 3em;
+			max-width: 1500px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-column-gap:1em;
+
+		}
+
+		.cella{
+			/*outline: 1px red solid;*/
+			min-height: 2em;
+			margin-bottom: 1em;
+			font-weight: lighter;
+			font-family: Helvetica;
+		}
+
+		.quadrupla{
+			grid-column: span 4;
+
+		}
+		.doppia{
+			grid-column: span 2;
+
+		}
+
+		.dida {
+			font-weight: lighter;
+			font-size: 0.5em;
+		}
+
+
+		.titoletto{
+			font-weight: lighter;
+		}
+
+		.title:empty:not(:focus):before {
+  		content: attr(data-placeholder);
+  		color:grey;
+		}
+
+	
+
+		</style>
+
+
+<div  class="griglia">
+<div class="cella quadrupla">
+		<h2>CryptoSound</h2>
+	</div>
+
+<div class="cella doppia titoletto">
+		Decoder
+
+
+	</div>
+	<div class="cella doppia">
+	</div>
+
+	<div class="cella doppia">
+		<div style="resize: none;" id="input_text"  class="box1">
+		<pre contenteditable="false" data-placeholder="Message" class="title"></pre>
+		<script src="pitchdetect.js"></script>
+
+		</div>
+		
+		
+
+	
+	
+
+
+	</body>
+</html>
